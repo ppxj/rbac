@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documenttt</title>
+	<script type="text/javascript" src="../Public/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		$('input[level=1]').click(function(){
+			var inputs=$(this).parents('.app').find('input');
+			$(this).attr('checked')?inputs.attr('checked','checked');
+				inputs.removeAttr('checked');
+		})
+
+	});
+
+	</script>
+</head>
+<body>
+<table>
+
+<a href="{:U(GROUP_NAME.'/Rbac/role')}">返回</a>
+
+	<tr>
+		<th colspan="2"></th>
+	</tr>
+		<form action="{:U(GROUP_NAME.'/Rbac/setAccess')}" method="post">
+		<foreach name="node" item="app">
+		<tr bgcolor="red">
+
+			<td>{$app.title}</td>
+			<td><input type="checkbox" name="access[]" value="{$app.id}_1" level="1" <if condition="$app['access']">checked='checked'</if>   /></td>
+		</tr>
+
+			<foreach name="app.child" item="action">
+				<tr bgcolor="green">
+					<td colspan="2">=={$action.title}</a></td>
+				
+					<td><input type="checkbox" name="access[]" value="{$action.id}_2" level="2" <if condition="$action['access']">checked='checked'</if>></td>
+				</tr>
+			
+				<foreach name="action.child" item="method">
+					<tr>
+						<td colspan="2">===={$method.title}</td>
+			
+						<td><input type="checkbox" name="access[]"  value="{$method.id}_3" level="3" <if condition="$method['access']">checked='checked'</if>></td>
+					</tr>
+
+
+				</foreach>
+		</foreach>
+
+	</foreach>
+				<tr>
+					<input type="hidden" value="{$rid}" name="rid">
+					<td colspan="2"><input type="submit" value="保存添加"></td>
+				</tr>
+
+			
+	</form>
+
+</table>
+
+<!--  id:<br />
+ 名称：{$v.name}<br />
+ 描述：{$v.title}<br />
+ 状态：<if condition="$v['status'] eq 1">开启
+ 		<else/>关闭</if><br />
+<br /><br /> -->
+
+
+
+</body>
+</html>

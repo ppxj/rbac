@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<foreach name="list" item="v">
+角色名称：{$v.name}<br />
+角色描述：{$v.remark}<br />
+开启状态：<if condition="$v['status'] eq 1">开启&nbsp;&nbsp;<else/>关闭&nbsp;&nbsp;</if><br />
+<a href="{:U(GROUP_NAME.'/Rbac/access',array('rid'=>$v['id']))}">配置权限</a><br /><br />
+</foreach>
+</body>
+</html>

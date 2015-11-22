@@ -1,0 +1,18 @@
+[ 2015-11-22T14:01:52+08:00 ] 0.0.0.0 /rbac/
+ERR: 无法加载模块:Index
+
+[ 2015-11-22T14:42:07+08:00 ] 0.0.0.0 /rbac/index.php/admin/admin_rbac/role.html
+ERR: 无法加载模块:AdminRbac
+
+[ 2015-11-22T17:03:37+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/access/rid/1.html
+ERR: XML标签语法错误 : condition='$app['access']'
+
+[ 2015-11-22T17:05:12+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/access/rid/1.html
+ERR: XML标签语法错误 : condition='$action['access']'
+
+[ 2015-11-22T17:05:25+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/access/rid/1.html
+ERR: XML标签语法错误 : condition='$method['access']'
+
+[ 2015-11-22T17:08:48+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/addUser.html
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/adduser.html]
+
