@@ -4,7 +4,10 @@
 
 		//用户列表
 		PUblic function index(){
-			echo 111;
+			$this->user=D('UserRelation')->field('password',true)->relation(true)->select();
+
+			p($result);
+			$this->display();
 		}
 		//角色列表
 		PUblic function role(){
@@ -28,9 +31,39 @@
 		}
 		//添加用户
 		PUblic function addUser(){
+			
 			$this->role=M('role')->select();
 			$this->display();
 		}
+		Public function addUserHandle(){
+			// p($_POST);
+			//用户信息
+			$user=array(
+				'username'=>I('username',''),
+				'password'=>I('password','','md5'),
+				'logintime'=>time(),
+				'loginip'=>get_client_ip()
+				);
+			if($uid=M('user')->add($user)){
+				// p($uid);
+				// die();
+				foreach($_POST['role_id'] as $v){
+					$role[]=array(
+						'role_id'=>$v,
+						'user_id'=>$uid
+					);
+				}
+				//添加用户角色
+				// p($role);
+				// die();
+				M('role_user')->addAll($role);
+				$this->success('添加成功',U(GROUP_NAME.'/Rbac/index'));
+			}else{
+				$this->error('添加失败');
+			}
+
+		}
+		//
 		//添加角色
 		PUblic function addRole(){
 			

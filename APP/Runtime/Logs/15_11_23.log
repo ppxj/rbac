@@ -1,0 +1,45 @@
+[ 2015-11-23T13:38:13+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index
+ERR: Model:seletc您所请求的方法不存在！
+
+[ 2015-11-23T13:38:24+08:00 ] 0.0.0.0 /rbac/index.php/admin/Rbac/index
+ERR: Model:seletc您所请求的方法不存在！
+
+[ 2015-11-23T13:52:11+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/addUserHandle.html?username=ddd&password=ddd&role%5B%5D=1&role%5B%5D=2
+ERR: 非法操作:adduserhandle
+
+[ 2015-11-23T15:07:13+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:17:19+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:18:32+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:25:38+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:29:39+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:35:59+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T15:36:29+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: 模板不存在[./APP/Modules/Admin/Tpl/Rbac/index.html]
+
+[ 2015-11-23T16:11:08+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: XML标签语法错误 : condition="$v["lockdd"]"
+
+[ 2015-11-23T16:22:58+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: XML标签语法错误 : condition='$v["username"]' eq C("RBAC_SUPERADMIN")
+
+[ 2015-11-23T16:23:27+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: XML标签语法错误 : condition="$v["username"]' eq C("RBAC_SUPERADMIN")""
+
+[ 2015-11-23T16:23:27+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: XML标签语法错误 : condition="$v["username"]' eq C("RBAC_SUPERADMIN")""
+
+[ 2015-11-23T16:23:28+08:00 ] 0.0.0.0 /rbac/index.php/admin/rbac/index.html
+ERR: XML标签语法错误 : condition="$v["username"]' eq C("RBAC_SUPERADMIN")""
+

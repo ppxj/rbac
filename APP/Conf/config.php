@@ -27,6 +27,7 @@ return array(
     'URL_404_REDIRECT'      =>  '', // 404 跳转页面 部署模式有效
 
     'SHOW_PAGE_TRACE' =>true, // 显示页面Trace信息
+    'RBAC_SUPERADMIN'   =>'admin',//RBAC超级管理员
         
 );
 ?>

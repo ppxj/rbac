@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<foreach name="user" item="v">
+		编号：{$v.id}<br />
+		用户名字：{$v.username}<br />
+		登录时间：{$v.logintime|date='y-m-d H:i',###}<br />
+		登录ip：{$v.loginip}<br />
+		锁定状态：<if condition="$v['lockdd'] neq 0">锁定<else/>未锁定</if><br />
+			角色：
+			<if condition="$v['username'] eq C('RBAC_SUPERADMIN')">
+			超级管理员
+			<else/>
+				<foreach name="v.role" item="value">
+					{$value.name}({$value.remark})
+				</foreach><br />
+			</if>
+<br /><br />
+	</foreach>
+</body>
+</html>
